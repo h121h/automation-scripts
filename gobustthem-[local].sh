@@ -15,13 +15,24 @@ echo "\e[1;32m[!]  Example:\e[0m" "\e[1;32msh gobustthem.sh hosts.txt list.txt \
 fi
 
 while read LINE
+
+if [ -z "$LINE" ]
+then
+echo "\e[1;31m[!]  Done!\e[0m";
+echo "\e[1;32m[!]  Output FIle:\e[0m" "\e[1;32m output.txt \e[0m";
+	exit
+fi
+
 echo "\e[1;32m|-  Bruteforcing $LINE... \e[0m";
 do gobuster -u $LINE -w $2 >> output.txt
-echo "" > output.txt
-echo "" > output.txt
-echo "" > output.txt
-echo "" > output.txt
-echo "" > output.txt
-echo "" > output.txt
-echo "" > output.txt
+echo "" >> output.txt
+echo "" >> output.txt
+echo "" >> output.txt
+echo "" >> output.txt
+echo "" >> output.txt
+echo "" >> output.txt
+echo "" >> output.txt
+
+
+
 done<$1
