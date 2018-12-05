@@ -72,3 +72,4 @@ case $choice in
 		read path
           python3 tools/dirsearch/dirsearch.py  -u $t -w $path
           ;;
+esac
